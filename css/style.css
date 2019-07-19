@@ -8,6 +8,25 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -35,6 +54,7 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   color: #507fe1;
+  background-color: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
@@ -44,6 +64,12 @@ body {
   padding: 25px 45px;
   background-color: #507fe1;
   color: #fff;
+}
+
+@media (max-width: 576px) {
+  .button-o {
+    font-size: 10px;
+  }
 }
 
 .navbar {
@@ -65,7 +91,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 80px;
 }
 
 .navbar__mobile, .navbar__landline {
@@ -97,8 +122,8 @@ body {
   padding: 16px 0;
   background-color: #507fe1;
   color: #fff;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -172,6 +197,34 @@ body {
   font-size: 14px;
 }
 
+@media (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    top: 60px;
+  }
+  .menu-button {
+    height: 60px;
+  }
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__nav li {
+    display: block;
+    margin: 10px;
+  }
+}
+
 .hero {
   background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center center;
   background-size: cover;
@@ -190,5 +243,12 @@ body {
   margin-bottom: 67px;
   font-size: 30px;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 30%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
