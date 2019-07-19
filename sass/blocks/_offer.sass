@@ -8,7 +8,7 @@
         margin-top: -200px
     &__title
         font-size: 25px
-        text-transform: 
+        text-transform: uppercase
         +bold
         margin-bottom: 20px
     &__subtitle
@@ -41,6 +41,10 @@
     .offer
         &__block
             background-position: center right -120px
+@media (max-width: 991px)
+    .offer
+        &__block
+            background-position: center right -160px
 @media (max-width: 768px)
     .offer
         &__block
@@ -61,3 +65,11 @@
             width: 100%
         &__input
             margin-bottom: 20px
+@media (max-width: 576px)
+    .form
+        &__row
+            &-checkbox
+                flex-direction: column
+                align-items: flex-start
+        &__checkbox
+            margin-bottom: 10px
