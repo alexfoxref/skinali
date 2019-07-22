@@ -615,6 +615,10 @@ img {
   }
 }
 
+.feature {
+  padding-bottom: 0;
+}
+
 .feature-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -894,6 +898,11 @@ img {
           align-items: center;
   min-height: 80px;
   font-size: 20px;
+}
+
+.prod-list__text:hover {
+  cursor: pointer;
+  color: #507fe1;
 }
 
 .prod-list__card {
