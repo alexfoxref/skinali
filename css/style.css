@@ -67,17 +67,6 @@ img {
   margin-bottom: 100px;
 }
 
-.button-o {
-  border: 2px solid #507fe1;
-  padding: 17px 22px;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #507fe1;
-  background-color: #fff;
-  font-family: 'Proxima Nova Semibold', sans-serif;
-  text-decoration: none;
-}
-
 .input {
   height: 80px;
   padding-left: 30px;
@@ -128,6 +117,22 @@ img {
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
+.button-o {
+  border: 2px solid #507fe1;
+  padding: 17px 22px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #507fe1;
+  background-color: #fff;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  text-decoration: none;
+}
+
+.button-o:hover {
+  color: #ffffff;
+  background-color: #507fe1;
+}
+
 .button-fitting {
   padding: 10px;
   color: #507fe1;
@@ -155,6 +160,18 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.button-slider {
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+}
+
+.button-slider:focus {
+  outline: none;
 }
 
 @media (max-width: 576px) {
@@ -332,11 +349,81 @@ img {
 }
 
 .hero {
-  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top;
-  background-size: cover;
-  margin-top: 80px;
+  background-color: #f1f1f1;
+  max-height: 690px;
+}
+
+.hero__slider {
+  min-width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__panel {
+  position: absolute;
+  top: 620px;
+  left: 0;
+  min-width: 100%;
+}
+
+.hero__control {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero__control-button {
+  background-color: rgba(123, 123, 121, 0.5);
+}
+
+.hero__control-button:hover {
+  -webkit-box-shadow: 0 0 10px 5px #ffffff;
+          box-shadow: 0 0 10px 5px #ffffff;
+}
+
+.hero__control-button_active {
+  background-color: #fff;
+}
+
+.hero__description {
+  color: rgba(123, 123, 121, 0.5);
+  font-size: 14px;
+  margin-top: 130px;
+}
+
+.hero__slide {
+  min-width: 100%;
+  height: 100%;
   padding-top: 120px;
   padding-bottom: 270px;
+  margin-top: 80px;
+  background-size: cover;
+}
+
+.hero__slide_1 {
+  background: url("../img/hero/hero-bg.jpg") no-repeat center top;
+}
+
+.hero__slide_2 {
+  background: url("../img/hero/hero-bg.jpg") no-repeat center top;
+}
+
+.hero__slide_3 {
+  background: url("../img/hero/hero-bg.jpg") no-repeat center top;
 }
 
 .hero__title {
@@ -352,20 +439,56 @@ img {
 }
 
 @media (max-width: 991px) {
-  .hero {
-    background-size: 100%;
-    background-position: top right;
+  .hero__slide {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-size: cover;
+    background-position: top right -270px;
+  }
+  .hero__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .hero__subtitle {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .hero__panel {
+    top: 380px;
+  }
+  .hero__description {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__slide {
+    background-position: top right -480px;
   }
 }
 
 @media (max-width: 576px) {
   .hero {
-    margin-top: 60px;
+    margin-top: -20px;
+  }
+  .hero__slide {
+    background-position: top right -620px;
+  }
+  .hero__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .hero__subtitle {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  .hero__panel {
+    top: 330px;
   }
 }
 
 .offer {
-  padding: 129px 0;
+  padding: 50px 0;
 }
 
 .offer__block {
@@ -374,7 +497,8 @@ img {
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   padding: 80px;
-  margin-top: -200px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .offer__title {
@@ -439,6 +563,8 @@ img {
 @media (max-width: 991px) {
   .offer__block {
     background-position: center right -160px;
+    -webkit-transform: translateY(-120px);
+            transform: translateY(-120px);
   }
 }
 

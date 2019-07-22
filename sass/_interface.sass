@@ -12,15 +12,6 @@ img
         text-transform: uppercase
     &__title
         margin-bottom: 100px
-.button-o
-    border: 2px solid $primary
-    padding: 17px 22px
-    font-size: 12px
-    text-transform: uppercase
-    color: $primary
-    background-color: #fff
-    +bold
-    text-decoration: none
 .input
     height: 80px
     padding-left: 30px
@@ -51,6 +42,18 @@ img
     background-color: $primary
     color: #fff
     +bold
+    &-o
+        border: 2px solid $primary
+        padding: 17px 22px
+        font-size: 12px
+        text-transform: uppercase
+        color: $primary
+        background-color: #fff
+        +bold
+        text-decoration: none
+        &:hover
+            color: #ffffff
+            background-color: $primary
     &-fitting
         padding: 10px
         color: $primary
@@ -68,6 +71,14 @@ img
         display: flex
         justify-content: center
         align-items: center
+    &-slider
+        min-width: 10px
+        min-height: 10px
+        border-radius: 50%
+        padding: 0
+        border: none
+        &:focus
+            outline: none
 @media (max-width: 576px)
     .button-o
         font-size: 10px
