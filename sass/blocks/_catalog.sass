@@ -9,12 +9,20 @@
     &-card
         max-width: 570px
         position: relative
+        z-index: 10
         box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
+        overflow: hidden
         &__buttons
             position: absolute
-            bottom: 0
+            bottom: -30px
             right: 0
             display: flex
+            transition: .2s
+            button
+                &:hover
+                    cursor: pointer
+            &_active
+                bottom: 0
         &__button
             font-size: 11px
             border: none
